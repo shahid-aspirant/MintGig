@@ -1,3 +1,21 @@
+/**
+ * ==============================================================================
+ * MintGig Storage Adapter (The Business Logic Engine)
+ * ==============================================================================
+ * This module acts as the "backend" and database interface for MintGig.
+ * It provides persistent CRUD operations, enforces business rules, and ensures
+ * that practical challenge completions unlock client gigs.
+ * 
+ * Key Responsibilities:
+ * 1. User authentication & role safety checks (no self-promotion).
+ * 2. Evaluating and recording challenge completions.
+ * 3. Dynamically checking whether a gig is UNLOCKED for a given learner.
+ * 4. Preventing duplicate gig applications.
+ * 5. Reviewer certification workflow (no self-review, releases simulated bounty).
+ * 6. Managing the evidence-based public portfolio.
+ * ==============================================================================
+ */
+
 import {
   SEED_LEARNING_PATHS,
   SEED_GIGS,
